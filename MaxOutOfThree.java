@@ -41,12 +41,12 @@ public class MaxOutOfThree {
 	 * @param str3
 	 * @return UC3 :Maximum Value Out Of Three String
 	 */
-	public String maxOfString (String str1,String str2,String str3) {
-		String MaxString=str1;
-		if(str2.compareTo(MaxString)>0)
-			MaxString=str2;
-		if(str3.compareTo(MaxString)>0)
-			MaxString=str3;	
+	public String maxOfString (String x1,String x2,String x3) {
+		String MaxString=x1;
+		if(x2.compareTo(MaxString)>0)
+			MaxString=x2;
+		if(x3.compareTo(MaxString)>0)
+			MaxString=x3;	
 		return MaxString;
 	}
 	
