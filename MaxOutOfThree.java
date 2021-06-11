@@ -35,6 +35,20 @@ public class MaxOutOfThree {
 		return MaxDouble;
 		
 	}
+	/**
+	 * @param str1
+	 * @param str2
+	 * @param str3
+	 * @return UC3 :Maximum Value Out Of Three String
+	 */
+	public String maxOfString (String str1,String str2,String str3) {
+		String MaxString=str1;
+		if(str2.compareTo(MaxString)>0)
+			MaxString=str2;
+		if(str3.compareTo(MaxString)>0)
+			MaxString=str3;	
+		return MaxString;
+	}
 	
 	/**
 	 * @param Main Method For Invoke Methods
@@ -45,6 +59,8 @@ public class MaxOutOfThree {
 		System.out.println(maxOutOfInt);
 		double maxOutOfDouble = max.maxOfDouble(3.7,10.2,-25.2);
 		System.out.println(maxOutOfDouble);
+		String maxOutOfString = max.maxOfString("Apple","Peach","Banana");
+		System.out.println(maxOutOfString);
 
 	
 	}
