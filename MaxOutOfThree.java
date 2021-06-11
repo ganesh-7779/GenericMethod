@@ -9,45 +9,16 @@ public class MaxOutOfThree {
 	 * @param x1
 	 * @param x2
 	 * @param x3
-	 * @return UC1:Maximum Value of Three Integer
+	 * @return Maximum Of three Of Any Type Data
 	 */
-	public Integer maxOfInt (Integer x1, Integer x2, Integer x3) {
+	public <T extends Comparable<T>> T MaxOfDataType(T x1, T x2, T x3) {
 		
-		Integer MaxInt= x1;
-		if(x2.compareTo(MaxInt)>0)
-			MaxInt=x2;
-		if(x3.compareTo(MaxInt)>0)
-			MaxInt=x3;
-		return MaxInt;
-	}
-	/**
-	 * @param x1
-	 * @param x2
-	 * @param x3
-	 * @return UC2 :Maximum Value Out Of Three Double
-	 */
-	public Double maxOfDouble (Double x1,Double x2,Double x3) {
-		Double MaxDouble= x1;
-		if(x2.compareTo(MaxDouble)>0)
-			MaxDouble=x2;
-		if(x3.compareTo(MaxDouble)>0)
-			MaxDouble=x3;
-		return MaxDouble;
-		
-	}
-	/**
-	 * @param str1
-	 * @param str2
-	 * @param str3
-	 * @return UC3 :Maximum Value Out Of Three String
-	 */
-	public String maxOfString (String x1,String x2,String x3) {
-		String MaxString=x1;
-		if(x2.compareTo(MaxString)>0)
-			MaxString=x2;
-		if(x3.compareTo(MaxString)>0)
-			MaxString=x3;	
-		return MaxString;
+		T Max= x1;
+		if(x2.compareTo(Max)>0)
+			Max=x2;
+		if(x3.compareTo(Max)>0)
+			Max=x3;
+		return Max;
 	}
 	
 	/**
@@ -55,11 +26,11 @@ public class MaxOutOfThree {
 	 */
 	public static void main (String[]args) {
 		MaxOutOfThree max = new MaxOutOfThree();
-		int maxOutOfInt= max.maxOfInt(4,5,24);
+		int maxOutOfInt= max.MaxOfDataType(4,5,24);
 		System.out.println(maxOutOfInt);
-		double maxOutOfDouble = max.maxOfDouble(3.7,10.2,-25.2);
+		double maxOutOfDouble = max.MaxOfDataType(3.7,10.2,-25.2);
 		System.out.println(maxOutOfDouble);
-		String maxOutOfString = max.maxOfString("Apple","Peach","Banana");
+		String maxOutOfString = max.MaxOfDataType("Apple","Peach","Banana");
 		System.out.println(maxOutOfString);
 
 	
